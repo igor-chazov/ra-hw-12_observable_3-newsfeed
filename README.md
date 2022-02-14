@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# 12. Домашнее задание к лекции «Redux Observable»
 
-## Available Scripts
+[[GithubPages](https://igor-chazov.github.io/ra-hw-12_observable_3-newsfeed)]
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 12.3 Лента новостей
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Вам необходимо реализовать некий аналог подгрузки новостей Вк.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+При загрузке страницы грузятся первые 5 новостей (на картинке только две, чтобы уместилось):
 
-### `npm test`
+![](./assets/load-more.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+При нажатии на кнопку "К предыдущим записям", происходит дозагрузка ещё 5:
 
-### `npm run build`
+![](./assets/loading.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+При возникновении ошибок пользователь не уведомляется, а происходят повторные попытки дозагрузки каждые 3 секунды.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+При исчерпании новостей (сервер вернёт пустой массив, либо количество элементов в массиве будет меньше 5), снизу под карточками не отображаются ни кнопки, ни индикатор загрузки:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](./assets/finish.png)
 
-### `npm run eject`
+Для первоначальной загрузки новостей используйте следующий запрос:
+GET http://localhost:7070/api/news
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Для загрузки новостей начиная с определённой (X - id последней загруженной новости) используйте следующий запрос:
+GET http://localhost:7070/api/news?lastSeenId=X
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Серверная часть расположена в каталоге `backend`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Убедитесь, что вы правильно парсите реальные данные и максимално точно отображаете вид карточек.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Как минимум, должны отображаться:
+1. Время в формате день, месяц и часы:минуты
+1. Текст
+1. Количество лайков
+1. Количество комментариев
+1. Количество репостов
+1. Количество просмотров
 
-## Learn More
+Если научитесь отображать ещё и картинки со ссылками - будет вообще супер!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
