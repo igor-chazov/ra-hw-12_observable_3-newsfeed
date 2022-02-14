@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/ra-hw-12_observable_3-newsfeed/static/css/main.4a5c0bbd.css",
+    "main.js": "/ra-hw-12_observable_3-newsfeed/static/js/main.922a590e.js",
+    "static/media/Montserrat-Regular.woff2": "/ra-hw-12_observable_3-newsfeed/static/media/Montserrat-Regular.4d9eac545dbd8e6e6e7d.woff2",
+    "static/media/Montserrat-Regular.woff": "/ra-hw-12_observable_3-newsfeed/static/media/Montserrat-Regular.2f9bb87d767918726ee3.woff",
+    "static/media/likes-icon.svg": "/ra-hw-12_observable_3-newsfeed/static/media/likes-icon.cd210a595e6b2778bf3ee1eb83b30ee0.svg",
+    "static/media/reposts-icon.svg": "/ra-hw-12_observable_3-newsfeed/static/media/reposts-icon.b4e85ce89ce479f1151f909cfeb1e3be.svg",
+    "index.html": "/ra-hw-12_observable_3-newsfeed/index.html",
+    "static/media/views-icon.svg": "/ra-hw-12_observable_3-newsfeed/static/media/views-icon.6a2828d2ad09a32c54463b30b2c60fe8.svg",
+    "static/media/comments-icon.svg": "/ra-hw-12_observable_3-newsfeed/static/media/comments-icon.d76f0bef529e129721ec6af13c751355.svg",
+    "main.4a5c0bbd.css.map": "/ra-hw-12_observable_3-newsfeed/static/css/main.4a5c0bbd.css.map",
+    "main.922a590e.js.map": "/ra-hw-12_observable_3-newsfeed/static/js/main.922a590e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a5c0bbd.css",
+    "static/js/main.922a590e.js"
+  ]
+}
